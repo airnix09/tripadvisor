@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/icon.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="lightbox">
+      <div class="lightbox-content">
+        <p>Enregistrez-vous</p>
+        <form id="formulaire-enregistrement">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Votre nom"
+          /><br />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Votre email"
+          /><br />
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            value="vous me contactez pour..."
+          /><br />
+          <textarea
+            name="message"
+            id="message"
+            cols="100"
+            rows="10"
+            placeholder="Votre message"
+          ></textarea
+          ><br />
+          <button type="submit" class="btn">Envoyer</button>
+        </form>
+        <div class="lightbox-close">
+          <a href="#">
+            <i class="icon-medium icon-times"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="header-top">
+        <div class="container">
+          <div class="menu-navigation">
+            <i class="visible-sm icon-menu-bars icon-medium"></i>
+            <img
+              src="./assets/img/TA_logo_primary.svg"
+              alt="Logo TripAdvisor"
+            />
+            <i class="visible-sm icon-search icon-medium"></i>
+            <ul class="hide-sm navigation">
+              <li>
+                <a href="#">
+                  <i class="hide-sm icon-medium icon-plus-c"></i>
+                  <p class="hide-med hide-sm">Publier</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="hide-sm icon-medium icon-heart"></i>
+                  <p class="hide-med hide-sm">Voyages</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="hide-sm icon-medium icon-comments"></i>
+                  <p class="hide-med hide-sm">Messages</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="hide-sm icon-medium icon-friend"></i>
+                  <p class="hide-med hide-sm">Profil</p>
+                </a>
+              </li>
+              <li>
+                <button id="btn-inscription" class="hide-sm">
+                  S'INSCRIRE
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="header-middle">
+        <ul class="container menu-activities-scrolled">
+          <li><a href="#">Hôtels</a></li>
+          <li><a href="#">Activités</a></li>
+          <li><a href="#">Restaurants</a></li>
+          <li><a href="#">Vols</a></li>
+          <li><a href="#">Locations vacances</a></li>
+          <li><a href="#">Croisières</a></li>
+          <li><a href="#">Plus</a></li>
+        </ul>
+      </div>
+      <div class="header-bottom">
+        <div class="hide-sm ariane-bg">
+          <div class="container">
+            <ul class="ariane">
+              <li>
+                <a href="#">Europe</a>
+                <i class="icon-micro icon-single-chevron-right"></i>
+              </li>
+              <li>
+                <a href="#">France</a>
+                <i class="icon-micro icon-single-chevron-right"></i>
+              </li>
+              <li>
+                <a href="#">Île-de-France</a>
+                <i class="icon-micro icon-single-chevron-right"></i>
+              </li>
+              <li>
+                <a href="#">Paris</a>
+                <i class="icon-micro icon-caret-down"></i>
+              </li>
+            </ul>
+            <div><span>Visiter : </span><a href="#">Paris</a></div>
+          </div>
+        </div>
+        <div class="city-name">
+          <div class="bg-city">
+            <h1>Paris</h1>
+            <a href="#">
+              <i class="icon-medium icon-single-chevron-down"></i>
+            </a>
+          </div>
+          <div class="reset-city">
+            <a href="#">
+              <i class="icon-medium icon-times"></i>
+            </a>
+          </div>
+        </div>
+        <div class="menu-activities">
+          <div class="container">
+            <ul class="activities">
+              <li>
+                <i class="icon-large icon-hotels"></i>
+                <a href="#">Hôtels</a>
+              </li>
+              <li>
+                <i class="icon-large icon-attractions"></i>
+                <a href="#">Activités</a>
+              </li>
+              <li>
+                <i class="icon-large icon-restaurants"></i>
+                <a href="#">Restaurants</a>
+              </li>
+              <li>
+                <i class="icon-large icon-flights"></i>
+                <a href="#">Vols</a>
+              </li>
+              <li>
+                <i class="icon-large icon-vacation-rentals"></i>
+                <a href="#">Locations <br class="hide-sm" />vacances</a>
+              </li>
+              <li>
+                <i class="icon-large icon-cruises"></i>
+                <a href="#">Croisières</a>
+              </li>
+              <li>
+                <i class="icon-large icon-more-horizontal"></i>
+                <a href="#">Plus</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="social-media">
+          <div class="social-media-ad">
+            <img
+              src="./assets/img/Avatar_stock_PNG_v3.png"
+              alt="Some TripAdvisor social media profil"
+            />
+            <div class="social-media-ad-title">
+              <h3>Débloquez le meilleur de Tripadvisor</h3>
+            </div>
+            <ul>
+              <li>
+                <p>
+                  Enregistrez vos idées de voyage préférées et affichez-les sur
+                  une carte
+                </p>
+              </li>
+              <li>
+                <p>
+                  Recevez des alertes de prix et des offres pour voyager à votre
+                  manière
+                </p>
+              </li>
+              <li>
+                <p>
+                  Posez des questions et obtenez des réponses de la part de
+                  voyageurs tels que vous
+                </p>
+              </li>
+            </ul>
+            <div class="subscribe-ad">
+              <button>Inscrivez-vous</button>
+            </div>
+          </div>
+        </div>
+        <div class="essential">
+          <section>
+            <div class="section-city">
+              <h3>Paris, France</h3>
+            </div>
+            <div class="section-desc-city">
+              <p>
+                Déguster un pain au chocolat à la terrasse d'un café, se
+                délasser après une journée de balade sur les quais de la Seine,
+                s'émerveiller devant des lieux symboliques comme la Tour Eiffel
+                ou l'Arc de triomphe… Un séjour à Paris réussi conjugue
+                activités et détente, tout en prenant le temps de savourer un
+                bon repas tout comme les célèbres expositions du Louvre.
+                Commencez par prendre des forces à Notre-Dame, puis partez à la
+                chasse aux bonnes affaires au marché aux puces de Montreuil ou
+                goûtez aux spécialités vendues au marché biologique de Raspail
+                et pour terminer votre journée en beauté, couronnez le tout par
+                un spectacle osé au Moulin Rouge.
+              </p>
+              <div class="show-more">
+                <a href="#">
+                  <span>Afficher moins</span>
+                  <i class="icon-micro icon-caret-up"></i>
+                </a>
+              </div>
+            </div>
+            <div class="city-images">
+              <div
+                style="background-image: url('./assets/img/paris.jpg');"
+              ></div>
+              <div
+                style="
+                  background-image: url('./assets/img/musee-du-louvre.jpg');
+                "
+              ></div>
+              <div
+                style="
+                  background-image: url('./assets/img/comedie-tour-eiffel.jpg');
+                "
+              ></div>
+              <div
+                style="
+                  background-image: url('./assets/img/arc-de-triomphe.jpg');
+                "
+              >
+                <div><span>+ 2 151 864</span></div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="discover-city">
+              <h2>Découvrez le meilleur de Paris</h2>
+            </div>
+            <div class="best-restaurant">
+              <div>
+                <a href="#">
+                  <h3>Meilleurs restaurants à Paris</h3>
+                </a>
+              </div>
+              <div class="show-all">
+                <a href="#">Tout afficher</a>
+              </div>
+            </div>
+            <div class="list-of-restaurants">
+              <div class="restaurant">
+                <div
+                  class="restaurant-pic"
+                  style="background-image: url('./assets/img/jean-yves.jpg');"
+                >
+                  <div class="loved">
+                    <a class="#"><i class="icon-medium icon-heart-fill"></i></a>
+                  </div>
+                </div>
+                <div class="restaurant-name">
+                  <a href="#"><h3>FrenchyTaste</h3></a>
+                </div>
+                <div class="restaurant-score">
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <span>217 avis</span>
+                </div>
+              </div>
+              <div class="restaurant">
+                <div
+                  class="restaurant-pic"
+                  style="
+                    background-image: url('./assets/img/tarte-aux-abricots-revisitee.jpg');
+                  "
+                >
+                  <div class="loved">
+                    <a class="#"><i class="icon-medium icon-heart-fill"></i></a>
+                  </div>
+                </div>
+                <div class="restaurant-name">
+                  <a href="#"><h3>Signature</h3></a>
+                </div>
+                <div class="restaurant-score">
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <span>317 avis</span>
+                </div>
+              </div>
+              <div class="restaurant">
+                <div
+                  class="restaurant-pic"
+                  style="
+                    background-image: url('./assets/img/maigre-confit-a-l-huile.jpg');
+                  "
+                >
+                  <div class="loved">
+                    <a class="#"><i class="icon-medium icon-heart-fill"></i></a>
+                  </div>
+                </div>
+                <div class="restaurant-name">
+                  <a href="#"><h3>Boutary</h3></a>
+                </div>
+                <div class="restaurant-score">
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <span>1 081 avis</span>
+                </div>
+              </div>
+              <div class="restaurant">
+                <div
+                  class="restaurant-pic"
+                  style="background-image: url('./assets/img/via-emilia.jpg');"
+                >
+                  <div class="loved">
+                    <a class="#"><i class="icon-medium icon-heart-fill"></i></a>
+                  </div>
+                </div>
+                <div class="restaurant-name">
+                  <a href="#"><h3>Via Emillia</h3></a>
+                </div>
+                <div class="restaurant-score">
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <span>368 avis</span>
+                </div>
+              </div>
+              <div class="restaurant">
+                <div
+                  class="restaurant-pic"
+                  style="
+                    background-image: url('./assets/img/new-jawad-longchamp.jpg');
+                  "
+                >
+                  <div class="loved">
+                    <a class="#"><i class="icon-medium icon-heart-fill"></i></a>
+                  </div>
+                </div>
+                <div class="restaurant-name">
+                  <a href="#"><h3>New Jawad Longchamp</h3></a>
+                </div>
+                <div class="restaurant-score">
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <span>1 871 avis</span>
+                </div>
+              </div>
+              <div class="restaurant">
+                <div
+                  class="restaurant-pic"
+                  style="background-image: url('./assets/img/le-cheddar.jpg');"
+                >
+                  <div class="loved">
+                    <a class="#"><i class="icon-medium icon-heart-fill"></i></a>
+                  </div>
+                </div>
+                <div class="restaurant-name">
+                  <a href="#"><h3>Il était un square</h3></a>
+                </div>
+                <div class="restaurant-score">
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <i class="icon-micro icon-bubble-rating-full"></i>
+                  <span>3 170 avis</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="destination-shortcut">
+          <div class="sc-content">
+            <h3>Explorez Paris</h3>
+            <img src="./assets/img/tour-eiffel.jpg" alt="Eiffel tower" />
+            <ul class="category-sc">
+              <li>
+                <a href="#">Hébergements</a>
+              </li>
+              <li>
+                <a href="#">Hôtels familiaux</a>
+              </li>
+              <li>
+                <a href="#">Hôtels 5 étoiles</a>
+              </li>
+              <li>
+                <a href="#">Hôtels romantiques</a>
+              </li>
+            </ul>
+            <ul class="category-sc">
+              <li>
+                <a href="#">Activités</a>
+              </li>
+              <li>
+                <a href="#">Bars de jazz</a>
+              </li>
+              <li>
+                <a href="#">Musées d'art</a>
+              </li>
+              <li>
+                <a href="#">Cours de cuisine</a>
+              </li>
+            </ul>
+            <ul class="category-sc">
+              <li>
+                <a href="#">Quartiers à visiter</a>
+              </li>
+              <li>
+                <a href="#">Le Marais</a>
+              </li>
+              <li>
+                <a href="#">Saint-Germain-des-Prés</a>
+              </li>
+              <li>
+                <a href="#">Montmartre</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
